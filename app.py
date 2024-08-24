@@ -15,7 +15,7 @@ try:
         "scrapper",
         api_id=int(os.environ['API_ID']),
         api_hash=os.environ['API_HASH'],
-        bot_token=os.environ['BOT_TOKEN'],
+        phone_number=os.environ['PHONE_NUMBER'],
         parse_mode=ParseMode.MARKDOWN
     )
 
