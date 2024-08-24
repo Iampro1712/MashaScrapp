@@ -3,3 +3,6 @@ __pycachae__/
 .venv
 
 .env
+
+*.session
+*.session-journal
