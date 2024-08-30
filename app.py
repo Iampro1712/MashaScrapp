@@ -19,6 +19,15 @@ try:
         parse_mode=ParseMode.MARKDOWN
     )
 
+    @app.on_message()
+    @app.on_edited_message()
+    async def collector_message(client, message):
+        upper_text = message.text.upper()
+        if any(keyword in upper_text for keyword in ['APPROVED', 'CVV LIVE', 'CVV MATCHED', 'LIVE', 'CHARGED']) == True:
+            log.info("Found message with keywork: %s", message.text)
+
+        log.info("Found message: %s", message.text)
+        
     app.run()
 except KeyboardInterrupt:
     log.info("Shutting Down...")
