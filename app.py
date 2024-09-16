@@ -4,7 +4,7 @@ from pyrogram import Client
 from pyrogram.enums import ParseMode
 import logging
 
-load_dotenv()  # take environment variables from .env.
+load_dotenv(dotenv_path="PATH")  # take environment variables from .env.
 
 log = logging.getLogger(__name__)
 
