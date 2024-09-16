@@ -9,7 +9,6 @@ log = logging.getLogger('app')
 @Client.on_message()
 @Client.on_edited_message()
 async def collector_message(client: Client, message):
-    global msg_fr
 
     parser = Parser(message.text)
     card_parser = parseData(message.text)
